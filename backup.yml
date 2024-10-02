@@ -7,6 +7,8 @@
   tasks:
     - name: Gather facts about the Cisco device
       cisco.ios.ios_facts:
+      vars:
+        ansible_network_os: cisco.ios  # Spécifie que l'OS est Cisco IOS
 
     - name: Set the current date
       set_fact:
