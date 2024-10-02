@@ -1,0 +1,7 @@
+[cisco]
+10.201.0.2 ansible_connection=network_cli ansible_user=admin ansible_password=Adm6902Axians ansible_auth_pass=Adm6902Axians ansible_network_os=ios
+10.201.4.2 ansible_connection=network_cli ansible_user=admin ansible_password=Adm6902Axians ansible_auth_pass=Adm6902Axians ansible_network_os=ios
+10.201.4.3 ansible_connection=network_cli ansible_user=admin ansible_password=Adm6902Axians ansible_auth_pass=Adm6902Axians ansible_network_os=ios
+10.201.4.6 ansible_connection=network_cli ansible_user=admin ansible_password=Adm6902Axians ansible_auth_pass=Adm6902Axians ansible_network_os=ios
+10.201.4.7 ansible_connection=network_cli ansible_user=admin ansible_password=Adm6902Axians ansible_auth_pass=Adm6902Axians ansible_network_os=ios
+10.201.4.8 ansible_connection=network_cli ansible_user=admin ansible_password=Adm6902Axians ansible_auth_pass=Adm6902Axians ansible_network_os=ios

@@ -1,0 +1,20 @@
+---
+- name: Backup Cisco Devices
+  hosts: cisco
+  gather_facts: no  
+  connection: network_cli
+
+  tasks:
+    - name: Gather facts about the Cisco device
+      cisco.ios.ios_facts:
+
+    - name: Set the current date
+      set_fact:
+        current_date: "{{ lookup('pipe', 'date +\"%Y-%m-%d\"') }}"  
+
+    - name: Backup Cisco IOS Devices
+      cisco.ios.ios_config:
+        backup: true
+        backup_options:
+          filename: "{{ ansible_net_hostname }}-backup-{{ current_date }}.txt"  
+          dir_path: ./BACKUPS
