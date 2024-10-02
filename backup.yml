@@ -4,6 +4,9 @@
   gather_facts: no  
   connection: network_cli
 
+  vars:
+    ansible_ssh_common_args: '-o KexAlgorithms=diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1 -o HostKeyAlgorithms=+ssh-rsa'
+
   tasks:
     - name: Gather facts about the Cisco device
       cisco.ios.ios_facts:
