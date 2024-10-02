@@ -1,4 +1,14 @@
 ---
+- name: Installer les dépendances
+  hosts: localhost
+  tasks:
+    - name: Installer ansible-pylibssh
+      pip:
+        name: ansible-pylibssh
+    - name: Installer paramiko
+      pip:
+        name: paramiko
+
 - name: Backup Cisco Devices
   hosts: cisco
   gather_facts: no  
