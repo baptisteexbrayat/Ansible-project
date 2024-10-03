@@ -1,0 +1,13 @@
+---
+- name: Afficher le nom d'hôte du switch
+  hosts: cisco
+  gather_facts: no
+  connection: network_cli
+
+  tasks:
+    - name: Gather facts about the Cisco device
+      cisco.ios.ios_facts:
+
+    - name: Afficher le nom d'hôte
+      debug:
+        msg: "Le nom d'hôte du switch est {{ ansible_net_hostname }}"
